@@ -1,0 +1,13 @@
+version: '3.9'
+name: hhwire_stock_mng
+services:
+  stock_mng_dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: stock_mng_dev
+    ports:
+      - "8080:8080"
+    volumes:
+      - ../:/app
+    # command: "npm install && npm run dev"
